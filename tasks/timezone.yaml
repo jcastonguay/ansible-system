@@ -1,0 +1,4 @@
+    - name: Update /etc/timezone to UTC
+      file: src=timezone dest=/etc/timezone
+    - name: Assign system timezone
+      command: dpkg-reconfigure --frontend noninteractive tzdata

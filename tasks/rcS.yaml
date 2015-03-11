@@ -1,0 +1,3 @@
+- name: Copy /etc/default/rcS
+  action: template src=rcS.default dest=/etc/default/rcS
+          owner=root group=root mode=0644

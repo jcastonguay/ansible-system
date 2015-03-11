@@ -1,0 +1,3 @@
+- name: Copy /etc/cron.hourly/ntpdate
+  action: template src=ntpdate.cron dest=/etc/cron.hourly/ntpdate
+          owner=root group=root mode=0700

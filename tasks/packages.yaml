@@ -1,0 +1,22 @@
+    - name: Update apt sources.list
+      action: template src=sources.list dest=/etc/apt/sources.list
+    - name: Update Apt
+      apt: update_cache=yes 
+    - name: Full Upgrade
+      apt: upgrade=full
+    - name: Base set of packages
+      action: apt pkg={{item}} state=latest
+      with_items:
+       - less
+       - python
+       - sudo
+       - ntpdate
+       - tmux
+       - unbound
+       - git
+       - libpam-cracklib
+    - name: Remove cruft we do not need
+      action: apt pkg={{item}} state=absent purge=yes
+      with_items:
+       - mpt-statusd
+       - acpid

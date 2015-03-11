@@ -1,0 +1,7 @@
+--- 
+- include: timezone.yaml
+- include: packages.yaml
+- include: rcS.yaml
+- include: bash.yaml
+- include: ntpdate.yaml
+- include: hostname.yaml

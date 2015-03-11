@@ -1,0 +1,3 @@
+- name: Copy /etc/bash.bashrc
+  action: template src=bash.bashrc dest=/etc/bash.bashrc
+          owner=root group=root mode=0644
